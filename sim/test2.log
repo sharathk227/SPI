@@ -1,0 +1,729 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov2;run -all; exit" -wlf wave_file2.wlf -l test2.log -sv_seed random work.top "+UVM_TESTNAME=test_2" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 14:37:45 on Jul 04,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 2022.1 linux Jan 29 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.slave_if(fast)
+# Loading work.master_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.spi_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.slave_if(fast__2)
+# Loading work.master_if(fast__2)
+# Loading work.spi_top(fast)
+# Loading work.spi_clgen(fast)
+# Loading work.spi_shift(fast)
+# Loading /home/cad/eda/Questa-sim/questasim/uvm-1.1d/linux/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 3511560474
+#  log -r /* 
+# coverage save -onexit mem_cov2
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test_2...
+# ** Warning: (vsim-3881) ../tb/spi_scoreboard.sv(23): Sign-and-Width conversion applied in bin 'third' for Coverpoint 'CHAR'. Value '128' changed to '127 (maximum)' value.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-3882) ../tb/spi_scoreboard.sv(23): Out of bounds value range in bin 'third' for Coverpoint 'CHAR' converted to nearest valid bounded range of [96:127].
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(339) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test_2                      -     @479 
+#   env_h                      env                         -     @499 
+#     m_agt_top_h              master_agent_top            -     @507 
+#       m_agt_h                master_agent                -     @739 
+#         drv_h                master_drv                  -     @762 
+#           rsp_port           uvm_analysis_port           -     @777 
+#           seq_item_port      uvm_seq_item_pull_port      -     @769 
+#         mon_h                master_mon                  -     @747 
+#           monitor_port       uvm_analysis_port           -     @754 
+#         seqr_h               master_seqr                 -     @785 
+#           rsp_export         uvm_analysis_export         -     @792 
+#           seq_item_export    uvm_seq_item_pull_imp       -     @886 
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+#     s_agt_top_h              slave_agent_top             -     @518 
+#       s_agt_h                slave_agent                 -     @902 
+#         drv_h                slave_drv                   -     @925 
+#           rsp_port           uvm_analysis_port           -     @940 
+#           seq_item_port      uvm_seq_item_pull_port      -     @932 
+#         mon_h                slave_mon                   -     @910 
+#           monitor_port       uvm_analysis_port           -     @917 
+#         seqr_h               slave_seqr                  -     @948 
+#           rsp_export         uvm_analysis_export         -     @955 
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1049
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+#     sb_h                     spi_scoreboard              -     @529 
+#       m_fifo                 uvm_tlm_analysis_fifo #(T)  -     @536 
+#         analysis_export      uvm_analysis_imp            -     @575 
+#         get_ap               uvm_analysis_port           -     @567 
+#         get_peek_export      uvm_get_peek_imp            -     @551 
+#         put_ap               uvm_analysis_port           -     @559 
+#         put_export           uvm_put_imp                 -     @543 
+#       s_fifo                 uvm_tlm_analysis_fifo #(T)  -     @583 
+#         analysis_export      uvm_analysis_imp            -     @622 
+#         get_ap               uvm_analysis_port           -     @614 
+#         get_peek_export      uvm_get_peek_imp            -     @598 
+#         put_ap               uvm_analysis_port           -     @606 
+#         put_export           uvm_put_imp                 -     @590 
+#     v_seqr_h                 v_seqr                      -     @630 
+#       rsp_export             uvm_analysis_export         -     @637 
+#       seq_item_export        uvm_seq_item_pull_imp       -     @731 
+#       arbitration_queue      array                       0     -    
+#       lock_queue             array                       0     -    
+#       num_last_reqs          integral                    32    'd1  
+#       num_last_rsps          integral                    32    'd1  
+# --------------------------------------------------------------------
+# 
+# inside run -phase of driver
+# data_in for tx0
+# UVM_INFO ../master/master_drv.sv(54) @ 11000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is ----------------------------------------------------------------
+# Name         Type        Size  Value                            
+# ----------------------------------------------------------------
+# req          master_xtn  -     @1105                            
+#   WB_ADDR_I  integral    5     'h0                              
+#   WB_DATA_I  integral    31    'b1111010011001110111011101001110
+#   WB_DATA_O  integral    32    'b0                              
+#   WB_SEL_I   integral    4     'b0                              
+#   WB_WE_I    integral    1     'b1                              
+#   WB_STB_I   integral    1     'b0                              
+#   WB_CYC_I   integral    1     'b0                              
+#   WB_ACK_O   integral    1     'b0                              
+#   WB_INT_o   integral    1     'b0                              
+#   tx0        integral    32    'b0                              
+#   tx1        integral    32    'b0                              
+#   tx2        integral    32    'b0                              
+#   tx3        integral    32    'b0                              
+#   rx0        integral    32    'b0                              
+#   rx1        integral    32    'b0                              
+#   rx2        integral    32    'b0                              
+#   rx3        integral    32    'b0                              
+#   cntrl      integral    32    'b0                              
+#   ss         integral    32    'b0                              
+#   dvd        integral    32    'b0                              
+# ----------------------------------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 13000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon ----------------------------------------------------------------
+# Name         Type        Size  Value                            
+# ----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                            
+#   WB_ADDR_I  integral    5     'h0                              
+#   WB_DATA_I  integral    31    'b0                              
+#   WB_DATA_O  integral    32    'b0                              
+#   WB_SEL_I   integral    4     'b0                              
+#   WB_WE_I    integral    1     'b1                              
+#   WB_STB_I   integral    1     'b0                              
+#   WB_CYC_I   integral    1     'b0                              
+#   WB_ACK_O   integral    1     'b0                              
+#   WB_INT_o   integral    1     'b0                              
+#   tx0        integral    32    'b1111010011001110111011101001110
+#   tx1        integral    32    'b0                              
+#   tx2        integral    32    'b0                              
+#   tx3        integral    32    'b0                              
+#   rx0        integral    32    'b0                              
+#   rx1        integral    32    'b0                              
+#   rx2        integral    32    'b0                              
+#   rx3        integral    32    'b0                              
+#   cntrl      integral    32    'b0                              
+#   ss         integral    32    'b0                              
+#   dvd        integral    32    'b0                              
+# ----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# ----------------------------------------------------------------
+# Name         Type        Size  Value                            
+# ----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                            
+#   WB_ADDR_I  integral    5     'h0                              
+#   WB_DATA_I  integral    31    'b0                              
+#   WB_DATA_O  integral    32    'b0                              
+#   WB_SEL_I   integral    4     'b0                              
+#   WB_WE_I    integral    1     'b1                              
+#   WB_STB_I   integral    1     'b0                              
+#   WB_CYC_I   integral    1     'b0                              
+#   WB_ACK_O   integral    1     'b0                              
+#   WB_INT_o   integral    1     'b0                              
+#   tx0        integral    32    'b1111010011001110111011101001110
+#   tx1        integral    32    'b0                              
+#   tx2        integral    32    'b0                              
+#   tx3        integral    32    'b0                              
+#   rx0        integral    32    'b0                              
+#   rx1        integral    32    'b0                              
+#   rx2        integral    32    'b0                              
+#   rx3        integral    32    'b0                              
+#   cntrl      integral    32    'b0                              
+#   ss         integral    32    'b0                              
+#   dvd        integral    32    'b0                              
+# ----------------------------------------------------------------
+# data_in for tx1
+# UVM_INFO ../master/master_drv.sv(54) @ 21000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is ----------------------------------------------------------------
+# Name         Type        Size  Value                            
+# ----------------------------------------------------------------
+# req          master_xtn  -     @1182                            
+#   WB_ADDR_I  integral    5     'h4                              
+#   WB_DATA_I  integral    31    'b1010001100010010001000000101001
+#   WB_DATA_O  integral    32    'b0                              
+#   WB_SEL_I   integral    4     'b0                              
+#   WB_WE_I    integral    1     'b1                              
+#   WB_STB_I   integral    1     'b0                              
+#   WB_CYC_I   integral    1     'b0                              
+#   WB_ACK_O   integral    1     'b0                              
+#   WB_INT_o   integral    1     'b0                              
+#   tx0        integral    32    'b0                              
+#   tx1        integral    32    'b0                              
+#   tx2        integral    32    'b0                              
+#   tx3        integral    32    'b0                              
+#   rx0        integral    32    'b0                              
+#   rx1        integral    32    'b0                              
+#   rx2        integral    32    'b0                              
+#   rx3        integral    32    'b0                              
+#   cntrl      integral    32    'b0                              
+#   ss         integral    32    'b0                              
+#   dvd        integral    32    'b0                              
+# ----------------------------------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 23000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b0                               
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b0                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b0                               
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b0                               
+# -----------------------------------------------------------------
+# data_in for tx1
+# UVM_INFO ../master/master_drv.sv(54) @ 31000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is --------------------------------------------------------------
+# Name         Type        Size  Value                          
+# --------------------------------------------------------------
+# req          master_xtn  -     @1186                          
+#   WB_ADDR_I  integral    5     'h8                            
+#   WB_DATA_I  integral    31    'b11000010010011000000101111001
+#   WB_DATA_O  integral    32    'b0                            
+#   WB_SEL_I   integral    4     'b0                            
+#   WB_WE_I    integral    1     'b1                            
+#   WB_STB_I   integral    1     'b0                            
+#   WB_CYC_I   integral    1     'b0                            
+#   WB_ACK_O   integral    1     'b0                            
+#   WB_INT_o   integral    1     'b0                            
+#   tx0        integral    32    'b0                            
+#   tx1        integral    32    'b0                            
+#   tx2        integral    32    'b0                            
+#   tx3        integral    32    'b0                            
+#   rx0        integral    32    'b0                            
+#   rx1        integral    32    'b0                            
+#   rx2        integral    32    'b0                            
+#   rx3        integral    32    'b0                            
+#   cntrl      integral    32    'b0                            
+#   ss         integral    32    'b0                            
+#   dvd        integral    32    'b0                            
+# --------------------------------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 33000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b0                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b0                               
+# -----------------------------------------------------------------
+# data_in for divider
+# UVM_INFO ../master/master_drv.sv(54) @ 41000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is ------------------------------------
+# Name         Type        Size  Value
+# ------------------------------------
+# req          master_xtn  -     @1190
+#   WB_ADDR_I  integral    5     'h14 
+#   WB_DATA_I  integral    31    'b1  
+#   WB_DATA_O  integral    32    'b0  
+#   WB_SEL_I   integral    4     'b0  
+#   WB_WE_I    integral    1     'b1  
+#   WB_STB_I   integral    1     'b0  
+#   WB_CYC_I   integral    1     'b0  
+#   WB_ACK_O   integral    1     'b0  
+#   WB_INT_o   integral    1     'b0  
+#   tx0        integral    32    'b0  
+#   tx1        integral    32    'b0  
+#   tx2        integral    32    'b0  
+#   tx3        integral    32    'b0  
+#   rx0        integral    32    'b0  
+#   rx1        integral    32    'b0  
+#   rx2        integral    32    'b0  
+#   rx3        integral    32    'b0  
+#   cntrl      integral    32    'b0  
+#   ss         integral    32    'b0  
+#   dvd        integral    32    'b0  
+# ------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 43000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b0                               
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# data_in for ss
+# UVM_INFO ../master/master_drv.sv(54) @ 51000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is ------------------------------------
+# Name         Type        Size  Value
+# ------------------------------------
+# req          master_xtn  -     @1194
+#   WB_ADDR_I  integral    5     'h18 
+#   WB_DATA_I  integral    31    'b100
+#   WB_DATA_O  integral    32    'b0  
+#   WB_SEL_I   integral    4     'b0  
+#   WB_WE_I    integral    1     'b1  
+#   WB_STB_I   integral    1     'b0  
+#   WB_CYC_I   integral    1     'b0  
+#   WB_ACK_O   integral    1     'b0  
+#   WB_INT_o   integral    1     'b0  
+#   tx0        integral    32    'b0  
+#   tx1        integral    32    'b0  
+#   tx2        integral    32    'b0  
+#   tx3        integral    32    'b0  
+#   rx0        integral    32    'b0  
+#   rx1        integral    32    'b0  
+#   rx2        integral    32    'b0  
+#   rx3        integral    32    'b0  
+#   cntrl      integral    32    'b0  
+#   ss         integral    32    'b0  
+#   dvd        integral    32    'b0  
+# ------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 53000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b0                               
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# data_in for cntrl
+# UVM_INFO ../master/master_drv.sv(54) @ 61000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is -----------------------------------------------
+# Name         Type        Size  Value           
+# -----------------------------------------------
+# req          master_xtn  -     @1199           
+#   WB_ADDR_I  integral    5     'h10            
+#   WB_DATA_I  integral    31    'b11110100100101
+#   WB_DATA_O  integral    32    'b0             
+#   WB_SEL_I   integral    4     'b0             
+#   WB_WE_I    integral    1     'b1             
+#   WB_STB_I   integral    1     'b0             
+#   WB_CYC_I   integral    1     'b0             
+#   WB_ACK_O   integral    1     'b0             
+#   WB_INT_o   integral    1     'b0             
+#   tx0        integral    32    'b0             
+#   tx1        integral    32    'b0             
+#   tx2        integral    32    'b0             
+#   tx3        integral    32    'b0             
+#   rx0        integral    32    'b0             
+#   rx1        integral    32    'b0             
+#   rx2        integral    32    'b0             
+#   rx3        integral    32    'b0             
+#   cntrl      integral    32    'b0             
+#   ss         integral    32    'b0             
+#   dvd        integral    32    'b0             
+# -----------------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 63000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b11110100100101                  
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b1                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b0                               
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b11110100100101                  
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# local_char_len          37
+# UVM_INFO ../slave/slave_drv.sv(79) @ 351000: uvm_test_top.env_h.s_agt_top_h.s_agt_h.drv_h [SLAVE DRIVER] the slave driven is -------------------------
+# Name    Type       Size  Value                                                                                                                          
+# -------------------------
+# req     slave_xtn  -     @1204                                                                                                                          
+#   miso  integral   127   'b10110010001001001100000000011010101011100111110011100000100110110111110010101111001010010111101001111001111010110011010111011
+#   mosi  integral   127   'b0                                                                                                                            
+# -------------------------
+#  
+# UVM_INFO ../slave/slave_mon.sv(93) @ 355000: uvm_test_top.env_h.s_agt_top_h.s_agt_h.mon_h [SLAVE MONITOR] the xtn monitor by slave monitor ----------------------------------------------------------------
+# Name    Type       Size  Value                                  
+# ----------------------------------------------------------------
+# xtn     slave_xtn  -     @1082                                  
+#   miso  integral   127   'b1111010011110011110101100110101110110
+#   mosi  integral   127   'b100101111010011001110111011101001110 
+# ----------------------------------------------------------------
+# 
+# SCOREBOARD SLAVE XTN
+# ----------------------------------------------------------------
+# Name    Type       Size  Value                                  
+# ----------------------------------------------------------------
+# xtn     slave_xtn  -     @1082                                  
+#   miso  integral   127   'b1111010011110011110101100110101110110
+#   mosi  integral   127   'b100101111010011001110111011101001110 
+# ----------------------------------------------------------------
+# UVM_INFO ../master/master_drv.sv(54) @ 361000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [MASTER DRIVER] the data send from driver is ---------------------------------------------------------------
+# Name         Type        Size  Value                           
+# ---------------------------------------------------------------
+# req          master_xtn  -     @1209                           
+#   WB_ADDR_I  integral    5     'h0                             
+#   WB_DATA_I  integral    31    'b111111011010100100101011000001
+#   WB_DATA_O  integral    32    'b0                             
+#   WB_SEL_I   integral    4     'b0                             
+#   WB_WE_I    integral    1     'b0                             
+#   WB_STB_I   integral    1     'b0                             
+#   WB_CYC_I   integral    1     'b0                             
+#   WB_ACK_O   integral    1     'b0                             
+#   WB_INT_o   integral    1     'b0                             
+#   tx0        integral    32    'b0                             
+#   tx1        integral    32    'b0                             
+#   tx2        integral    32    'b0                             
+#   tx3        integral    32    'b0                             
+#   rx0        integral    32    'b0                             
+#   rx1        integral    32    'b0                             
+#   rx2        integral    32    'b0                             
+#   rx3        integral    32    'b0                             
+#   cntrl      integral    32    'b0                             
+#   ss         integral    32    'b0                             
+#   dvd        integral    32    'b0                             
+# ---------------------------------------------------------------
+# 
+# UVM_INFO ../master/master_mon.sv(74) @ 363000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [MASTER MON] printing from  the master xtn from mon -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b0                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b10011110011110101100110101110110
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b11110100100101                  
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# 
+# SCOREBOARD MASTER XTN 
+# -----------------------------------------------------------------
+# Name         Type        Size  Value                             
+# -----------------------------------------------------------------
+# xtn          master_xtn  -     @1088                             
+#   WB_ADDR_I  integral    5     'h0                               
+#   WB_DATA_I  integral    31    'b0                               
+#   WB_DATA_O  integral    32    'b0                               
+#   WB_SEL_I   integral    4     'b0                               
+#   WB_WE_I    integral    1     'b0                               
+#   WB_STB_I   integral    1     'b0                               
+#   WB_CYC_I   integral    1     'b0                               
+#   WB_ACK_O   integral    1     'b0                               
+#   WB_INT_o   integral    1     'b0                               
+#   tx0        integral    32    'b1111010011001110111011101001110 
+#   tx1        integral    32    'b11010001100010010001000000101001
+#   tx2        integral    32    'b11000010010011000000101111001   
+#   tx3        integral    32    'b0                               
+#   rx0        integral    32    'b10011110011110101100110101110110
+#   rx1        integral    32    'b0                               
+#   rx2        integral    32    'b0                               
+#   rx3        integral    32    'b0                               
+#   cntrl      integral    32    'b11110100100101                  
+#   ss         integral    32    'b100                             
+#   dvd        integral    32    'b1                               
+# -----------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 365000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# mosi verified
+# failed verification of miso
+# UVM_INFO ../master/master_drv.sv(62) @ 365000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.drv_h [master_drv] the number of master drv count =7
+# UVM_INFO ../master/master_mon.sv(85) @ 365000: uvm_test_top.env_h.m_agt_top_h.m_agt_h.mon_h [master_mon] the number of master mon count =7
+# UVM_INFO ../slave/slave_drv.sv(101) @ 365000: uvm_test_top.env_h.s_agt_top_h.s_agt_h.drv_h [slave_drv] the number of slave xtn driven = 1
+# UVM_INFO ../slave/slave_mon.sv(99) @ 365000: uvm_test_top.env_h.s_agt_top_h.s_agt_h.mon_h [SLAVE MONITOR] the number of slave xtn monitored           1
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   26
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MASTER DRIVER]     7
+# [MASTER MON]     7
+# [Questa UVM]     3
+# [RNTST]     1
+# [SLAVE DRIVER]     1
+# [SLAVE MONITOR]     2
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [master_drv]     1
+# [master_mon]     1
+# [slave_drv]     1
+# ** Note: $finish    : /home/cad/eda/Questa-sim/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3650 ns  Iteration: 67  Instance: /top
+# Saving coverage database on exit...
+# End time: 14:37:46 on Jul 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3
