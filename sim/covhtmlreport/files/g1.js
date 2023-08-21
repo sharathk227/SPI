@@ -1,2 +1,0 @@
-var g_data = {"14":{"pr":"/spi_test_pkg","ty":2,"dui":3,"dun":"work.spi_test_pkg","cvgs":[{"h":["\\/spi_test_pkg::spi_scoreboard::fcov1 ",2,1,23,15],"cov":[30,18,89.28],"opts":{"goal":"100","per_instance":"true"}},{"h":["/spi_test_pkg/spi_scoreboard/fcov1",1,1,15],"cov":[30,18,89.28],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
-processCovergroupsData(g_data);

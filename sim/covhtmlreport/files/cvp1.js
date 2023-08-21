@@ -1,2 +1,0 @@
-var g_data = {"16":["zero","one","second","third"],"17":["auto[0]","auto[1]"],"18":["tx_rx_1","tx_rx_2"],"19":["auto[0]","auto[1]"],"20":["auto[0]","auto[1]"],"21":["auto[0]","auto[1]"],"24":["zero","one","second","third"],"25":["auto[0]","auto[1]"],"26":["tx_rx_1","tx_rx_2"],"27":["auto[0]","auto[1]"],"28":["auto[0]","auto[1]"],"29":["auto[0]","auto[1]"]};
-processCoverpointsMapData(g_data);
